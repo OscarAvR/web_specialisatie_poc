@@ -1,0 +1,727 @@
+/* CATEGORY + PROJECTS */
+
+div.categoryContainer > div.category {
+    display: inline-block;
+    width: 100%;
+}
+div.categoryContainer > div.category > div.caseContainer {
+    overflow: hidden;
+    height: 848px;
+}
+
+div.categoryContainer > div.category > div.detailCaseContainer {
+    height: 200px;
+}
+
+div.categoryContainer > div.category > div.allCases {
+    height: auto !important;
+}
+
+div.categoryContainer > div.category > div.caseContainer > div.case {
+    height: 200px;
+}
+
+div.categoryContainer > div.category > div.caseContainer > div.case > a > div.content {
+    height: calc(200px - 48px);
+    width: calc(100% - 48px);
+    padding: 24px;
+    background: rgba(255,255,255,0.8);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+div.categoryContainer > div.category > div.caseContainer > div.case:hover > a > div.content {
+    opacity: 1;
+}
+
+div.categoryContainer > div.category > div.caseContainer > div.case > a > div.content > h5:first-child {
+    font-weight: 700;
+}
+
+/* PROJECT */
+
+div.infoContainer {
+    margin-top: 72px;
+    margin-bottom: 48px;
+    padding-top: 48px;
+}
+
+div.infoContainer > div.customSpan {
+    margin-right: 0 !important;
+    margin-top: 0px;
+}
+
+div.infoContainer > div.customSpan p.strong {
+    line-height: 36px;
+}
+
+div.infoContainer > div.customSpan:not(:last-child) {
+    width: calc(50% / 3 * 2) !important;
+}
+
+div.infoContainer > div.customSpan:last-child {
+    width: calc(50% / 3 - 16px) !important;
+}
+
+div.infoContainer div.detailsContent div p {
+    width: calc(50% - 24px);
+    display: inline-block;
+    float: left;
+    margin-right: 24px;
+}
+
+div.infoContainer div.details p, div.infoContainer div.share p {
+    font-size: 14px;
+}
+
+div.infoContainer div.share a {
+    display: block;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* LIST CATEGORY + PROJECTS */
+
+div.allCases div.case{
+    margin-bottom: 24px;
+}
+
+/* ABOUT / INFO CSS */
+
+div.aboutImage {
+    width: 100%;
+    height: 70vh;
+}
+
+div.aboutDescriptions {
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+div.aboutDescriptions div.description {
+    width: calc(50% - 15px);
+    display: inline-block;
+}
+
+div.aboutDescriptions div.description:first-child h1 {
+    margin-top: 48px;
+}
+
+div.aboutDescriptions div.description img {
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: calc(30% - 100px);
+}
+
+div.aboutDescriptions div.description:first-child {
+    margin-right: 24px;
+}
+
+div.aboutDescriptions div.description h1 {
+    margin-bottom: 24px;
+}
+
+div.statement {
+    width: 100%;
+}
+
+div.statement p {
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 36px;
+    margin: 48px 0;
+    display: inline-block;
+}
+
+/* BACKEND CSS 
+
+div.info {
+    margin-top: 48px;
+}
+
+div.info > div.customSpan {
+    margin-right: 0 !important;
+}
+
+div.info > div.customSpan:not(:last-child) {
+    width: 394px !important;
+}
+
+div.info > div.customSpan:last-child {
+    width: 304px !important;
+}
+
+div.info div.detailsContent div h3 {
+    width: 100px;
+    display: inline-block;
+    float: left;
+    margin-right: 24px;
+}
+
+div.info div.share a {
+    display: block;
+    text-decoration: underline;
+}
+
+form.projectData {
+    margin-bottom: 24px;
+}
+
+form.projectData input {
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+form.projectData select {
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+form.projectData div.description {
+    width: 550px !important;
+}
+
+form.projectData div.description h3 {
+    border-bottom: 1px solid #eeeeee;
+}
+
+form.projectData div.description textarea {
+    margin-top: 24px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 100;
+}
+
+form.projectData > input {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    margin-top: 48px;
+    width: calc(75% - 12px);
+    border-bottom: 1px solid #eeeeee;
+    margin-right: 24px;
+    padding-bottom: 3px;
+}
+
+form.projectData > div.projectCategory {
+    border-bottom: 1px solid #eeeeee;
+    width: calc(25% - 17px);
+    display: inline-block;
+}
+
+form.projectData > div.projectCategory > h3 {
+    width: 100px;
+    display: inline-block;
+}
+
+form.projectData > div.projectCategory > select {
+    width: 196px;
+}
+
+div.projectDetails > h3 {
+    width: calc(100% - 24px);
+    border-bottom: 1px solid #eeeeee;
+}
+
+form div.projectDetail {
+    border-bottom: 1px solid #eeeeee;
+    display: inline-block;
+    width: calc(100% - 24px);
+    margin-right: 24px;
+    margin-top: 12px;
+}
+
+form div.projectDetail input {
+    text-align: right;
+    padding-right: 12px;
+    width: 246px;
+}
+
+form div.projectDetail select {
+    width: 246px;
+}
+
+div.categoriesOptions div.categoriesOption {
+    width: calc(50% - 15px);
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+
+div.categoriesOptions div.categoriesOption:first-child {
+    margin-right: 24px;
+}
+
+div.categoriesOptions div.categoriesOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.categoriesOptions div.categoriesOption img {
+    width: auto;
+    height: 16px;
+}
+
+div.categoriesOptions div.categoriesOption input {
+    border: none;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+div.mainContainerBackend div.category {
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 24px;
+    margin-top: 48px;
+}
+
+div.category div.categoryOptions div.categoryOption {
+    width: calc(33.33% - 19px);
+    display: inline-block;
+    margin-right: 24px;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+
+div.category div.categoryOptions div.categoryOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.category div.categoryOptions div.categoryOption input {
+    border: none;
+    font-size: 20px;
+    line-height: 34px;
+}
+
+div.category div.categoryOptions div.categoryOption > input {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0;
+}
+
+div.category div.categoryOptions div.categoryOption img {
+    width: auto;
+    height: 16px;
+}
+
+div.category div.categoryOptions div.categoryOption:nth-child(3n+0) {
+    margin-right: 0;
+}
+
+div.category div.projects {
+    padding-bottom: 24px;
+}
+
+div.category div.projects div.project {
+    height: 250px;
+    margin-top: 24px;
+    position: relative;
+}
+
+div.category div.projects div.project div.projectOptionsContent {
+    opacity: 0;
+    transition: all 0.2s linear;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+}
+
+div.category div.projects div.project:hover div.projectOptionsContent {
+    opacity: 1;
+}
+
+div.category div.projects div.project div.projectOptions {
+    padding: 24px;
+    width: calc(100% - 48px);
+}
+
+div.category div.projects div.project div.projectOptions:not(:first-child) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption {
+    width: calc(50% - 15px);
+    display: inline-block;
+    position: relative;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption:first-child {
+    margin-right: 24px;
+    text-align: center;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption a.leftIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption a.leftIcon img {
+    position: absolute;
+    top: 11px;
+    left: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption a.rightIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption a.rightIcon img {
+    position: absolute;
+    top: 11px;
+    right: 0;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption h3 {
+    border-bottom: 1px solid #C7C7C7;
+}
+
+div.category div.projects div.project div.projectOptions div.projectOption img {
+    width: auto;
+    height: 16px;
+}
+
+div.homeOptions {
+
+}
+
+div.homeOptions h1 {
+    line-height: 42px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+div.homeOptions img {
+    width: auto;
+    height: 20px;
+    top: 11px;
+}
+
+div.homeOptions div.homeOption {
+    position: relative;
+}
+
+div.projectSlider > div.sliderOptions > div.sliderOption {
+    width: calc(50% - 15px);
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+
+div.projectSlider > div.sliderOptions > div.sliderOption:first-child {
+    margin-right: 24px;
+}
+
+div.projectSlider > div.sliderOptions > div.sliderOption > a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+div.projectSlider > div.sliderOptions > div.sliderOption > a > img {
+
+}
+
+div.sliderImages div.image {
+    height: 250px;
+    background: #eeeeee;
+    margin-top: 24px;
+    position: relative;
+}
+
+div.sliderImages div.imageOption {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #C7C7C7;
+    position: relative;
+    margin-top: 18px;
+}
+
+div.sliderImages div.image div.imageOptions {
+    opacity: 0;
+    transition: 0.2s all linear;
+    background: rgba(255,255,255,0.8);
+    padding: 0 24px;
+    height: 100%;
+    width: calc(100% - 48px);
+}
+
+div.sliderImages div.image:hover div.imageOptions {
+    opacity: 1;
+}
+
+div.sliderImages div.imageOption h3 {
+    width: auto;
+    display: inline-block;
+}
+
+div.sliderImages div.imageOption select {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 36px;
+    float: right;
+}
+
+div.sliderImages div.imageOption a.leftIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.sliderImages div.imageOption a.leftIcon img {
+    position: absolute;
+    top: 11px;
+    right: 24px;
+    height: 16px;
+}
+
+div.sliderImages div.imageOption a.rightIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.sliderImages div.imageOption a.rightIcon img {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    height: 16px;
+}
+
+div.sliderImages input {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0;
+}
+
+div.sliderImages div.imageOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+div.sliderImages div.imageOption:first-child {
+    margin-right: 24px;
+}
+
+div.sliderData h3 {
+    border-bottom: 1px solid #eeeeee;
+}
+
+div.sliderData div.sliderDataOption:not(:first-child) {
+    margin-top: 24px;
+}
+
+div.sliderData div.sliderDataOption {
+    position: relative;
+}
+
+div.sliderData div.sliderDataOption input {
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+div.sliderData div.sliderDataOption textarea {
+    width: 100%;
+    margin-top: 24px;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 100;
+}
+
+div.sliderData p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+div.about > a > h1 {
+    border-bottom: 1px solid #eeeeee;
+}
+
+div.about > textarea {
+    width: 100%;
+    border: none;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 100;
+}
+
+div.aboutImage {
+    margin-top: 24px;
+}
+
+div.aboutImage div.image {
+    background: #eeeeee;
+    height: 600px;
+}
+
+div.aboutImage div.imageOption {
+    width: calc(50% - 15px);
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 12px;
+    position: relative;
+}
+
+div.aboutImage > div.imageOption:last-child {
+    margin-left: 24px;
+}
+
+div.aboutImage > div.imageOption > a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+form.aboutData {
+    margin-bottom: 24px;
+}
+
+form.aboutData div.description {
+    margin-top: 24px;
+}
+
+form.aboutData div.description h3 {
+    border-bottom: 1px solid #eeeeee;
+}
+
+form.aboutData div.description input {
+    margin-top: 12px;
+    width: 100%;
+}
+
+form.aboutData div.description textarea {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 100;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+form.aboutData input {
+    border: none;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+form.aboutData div.social {
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+}
+
+form.aboutData div.social h3 {
+    border: none;
+}
+
+form.aboutData div.socialOption {
+    position: relative;
+    margin-top: 12px;
+}
+
+form.aboutData div.socialOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+form.aboutData div.partner {
+    width: 100%;
+    border-bottom: 1px solid #eeeeee;
+}
+
+form.aboutData div.partner h3 {
+    border: none;
+}
+
+form.aboutData div.partnerOption {
+    position: relative;
+    margin-top: 12px;
+}
+
+form.aboutData div.partnerOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+div.aboutFooter h3 {
+    border-bottom: 1px solid #eeeeee;
+}
+
+div.aboutFooter > div > input {
+    border-bottom: 1px solid #eeeeee;
+    width: 100%;
+}
+
+div.submit {
+    width: calc(50% - 12px);
+    margin-left: calc(50% + 12px);
+}
+
+div.submit div.submitOption {
+    width: calc(50% - 15px);
+    display: inline-block;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+}
+
+div.submit div.submitOption:first-child {
+    margin-right: 24px;
+}
+
+div.submit div.submitOption:first-child h3 {
+    color: #0AD80A;
+}
+
+div.submit div.submitOption:not(:first-child) h3 {
+    color: #FF5050;
+}
+
+div.submit div.submitOption a:not(:first-child) {
+    position: absolute;
+    top: 0;
+}
+
+div.submit div.submitOption a img {
+    width: auto;
+    height: 16px;
+}
+
+div.headerSubmit {
+    position: absolute;
+    top: 30px;
+}
+
+img.icon {
+    position: absolute;
+    top: 11px;
+    right: 0;
+    width: 16px;
+}
+
+*/

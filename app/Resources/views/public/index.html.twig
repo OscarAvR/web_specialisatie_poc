@@ -1,0 +1,58 @@
+{% extends 'layouts/base_public.html.twig' %}
+
+{% block body %}
+
+    {% include 'elements/slider_homepage.html.twig' %}
+
+	<div class="mainContainer" id="wp-content" onmouseenter="ShowHeader()">
+		<div class="categoryContainer">
+			<div class="category largeMargin">
+				<h1 class="smallMargin">Featured Projects</h1>
+				<div class="span4Container spanContainer caseContainer smallMargin">
+					{% for project in projects %}	
+						{% include 'elements/case.html.twig' %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script>
+		$( document ).ready(function() {
+			var viewportHtml = $('html');
+    		var viewportBody = $('body');
+    		
+    		setTimeout(function(){
+				if (viewportHtml.scrollTop() == 0 && viewportBody.scrollTop() == 0) {
+					setTimeout(function(){
+				        $('#burgerIcon').addClass("hide");
+				        $('#burgerClose').addClass("hide");
+				        $('#subArrowIcon').addClass("hide");
+				        setTimeout(function(){
+				        	$('#arrowIcon').removeClass("hide");
+				        }, 500);
+					}, 800);
+				}
+    		}, 200);
+		});
+	
+		$(function() {
+			$('#wp-content').waypoint(function(direction) {
+			    switch(direction)
+			    {
+			        case"down":
+			        	$('#header').removeClass('noBackground');
+			        	$('#arrowIcon').addClass("hide");
+			            setTimeout(function(){
+				        	$('#burgerIcon').removeClass("hide");
+				            $('#burgerClose').removeClass("hide");
+				            $('#subArrowIcon').removeClass("hide");
+				        }, 500);
+			            break;
+			    }
+			}, {offset: 128});
+		})
+	</script>
+{% endblock %}

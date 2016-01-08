@@ -1,0 +1,258 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    position: relative; 
+}
+
+body * {
+    transition: all 0.5s linear;
+}
+html {
+    overflow-y: scroll;
+    font-family: "Calibri", "Open Sans", sans-serif;
+}
+ul {
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+textarea {
+    resize: none;
+    transition: all 0.2s linear;
+    padding: 12px 0 !important;
+}
+input {
+    transition: all 0.2s linear;
+}
+
+/*  PAGE PARAMETERS */
+
+div.page {
+    width: 100%;
+    background: #ffffff;
+    position: relative;
+}
+
+div.mainContainer {
+    max-width: 1272px;
+    margin: auto;
+    position: relative;
+    background: #ffffff;
+}
+
+div.mainContainerBackend {
+    max-width: 1272px;
+    min-width: 1272px;
+    margin: auto;
+    position: relative;
+    background: #ffffff;
+    padding-bottom: 48px;
+}
+
+/* FONT PARAMETERS */
+
+h1 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 100;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+}
+
+li {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+}
+
+a {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 100;
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* SPAN CLASSES */
+
+div.spanContainer {
+    display: inline-block;
+}
+
+div.span {
+    display: inline-block;
+    float: left;
+}
+
+div.span2Container {
+    width: 100%;
+}
+
+div.span2Container > div.span2 {
+    width: calc(50% - 12px);
+    margin-right: 24px;
+}
+
+div.span2Container > div.span2:nth-child(2n+0) {
+    margin-right: 0;
+}
+
+div.span3Container {
+    width: 100%;
+}
+
+div.span3Container > div.span3 {
+    width: calc(33.333% - 16px);
+    margin-right: 24px;
+}
+
+div.span3Container > div.span3:nth-child(3n+0) {
+    margin-right: 0;
+}
+
+div.span4Container {
+    width: 100%;
+}
+
+div.span4Container > div.span4 {
+    width: calc(25% - 18px);
+    margin-right: 24px;
+}
+
+div.span4Container > div.span4:nth-child(4n+0) {
+    margin-right: 0;
+}
+
+/* GENERAL CLASSES */
+
+.largeMargin {
+    margin-bottom: 48px !important;
+}
+
+.mediumMargin {
+    margin-bottom: 24px !important;
+}
+
+.smallMargin {
+    margin-bottom: 6px !important;
+}
+
+.largePadding {
+    margin-bottom: 48px !important;
+}
+
+.mediumPadding {
+    margin-bottom: 24px !important;
+}
+
+.smallPadding {
+    margin-bottom: 12px !important;
+}
+
+.image {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+.light {
+    font-weight: 100;
+}
+
+.strong {
+    font-weight: 700 !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.headerMargin {
+    margin-top: 80px !important;
+}
+
+.topTextMargin {
+    margin-top: 24px !important;
+}
+
+/* JS CLASSES */
+
+.show {
+    opacity: 1 !important;
+}
+
+.hide {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.lock {
+    display: none !important;
+}
+
+.headerMargin {
+    margin-top: 95px;
+}
+
+.noBackground {
+    background: transparent !important;
+}
+
+.slideMenu {
+    top: 80px !important;
+}

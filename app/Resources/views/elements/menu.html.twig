@@ -1,0 +1,45 @@
+<div class="menuContainer" id="menu">
+	<div class="mainContainer">
+		<div class="upperMenu" id="upperMenu">
+			<div class="menuTopic">
+				<div class="categoryContainer">
+					<div class="category">
+						<a href="{{ path('category', {'id':projectsMenu[0][0].category.id}) }}"><h1 class="smallMargin">{{ projectsMenu[0][0].category.name }}</h1></a>
+						<div class="span4Container spanContainer caseContainer menuCaseContainer">
+							{% for project in projectsMenu[0] %}	
+								{% include 'elements/case.html.twig' %}
+							{% endfor %}
+						</div>
+						<a href="{{ path('category', {'id':projectsMenu[0][0].category.id}) }}">See more projects in this category</a>
+					</div>
+				</div>
+			</div>
+			<div class="menuTopic">
+				<div class="categoryContainer">
+					<div class="category">
+						<a href="{{ path('category', {'id':projectsMenu[1][0].category.id}) }}"><h1 class="smallMargin">{{ projectsMenu[1][0].category.name }}</h1></a>
+						<div class="span4Container spanContainer caseContainer menuCaseContainer">
+							{% for project in projectsMenu[1] %}	
+								{% include 'elements/case.html.twig' %}
+							{% endfor %}
+						</div>
+						<a href="{{ path('category', {'id':projectsMenu[1][0].category.id}) }}">See more projects in this category</a>
+					</div>
+				</div>
+			</div>	
+			<div class="menuTopic">
+				<div class="menuCategoryContainer">
+					<div class="menuCategory">
+						<div class="span2Container spanContainer menuCaseContainer partnerContainer">
+							<div class="span2 span menuCase">
+								<a href=""><h1>About + Contact + Partners</h1></a>
+							</div>
+							<div class="span2 span menuCase">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

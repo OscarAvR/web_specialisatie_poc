@@ -1,0 +1,68 @@
+{% extends 'layouts/base_public.html.twig' %}
+
+{% block body %}    
+    <div class="mainContainer headerMargin">
+		
+		{% include 'elements/slider_project.html.twig' %}
+		
+		<div class="span2Container spanContainer infoContainer">
+			<div class="span2 span" id="wp-content">
+				<h1 class="mediumMargin">{{ project.name }}</h1>
+				<p class="mediumMargin">{{ project.description }}</p>
+			</div>
+			<div class="span2 span customSpan details">
+				<p class="strong mediumMargin">Details</p>
+				<div class="detailsContent">
+					<div>
+						<p>Type</p>
+						<p>{{ project.category.name }}</p>
+					</div>
+					<div>
+						<p>Time span<p>
+						<p>{{ project.constructBegin }} - {{ project.constructEnd }}</p>
+					</div>
+					<div>
+						<p>Status<p>
+						<p>{{ (project.status) ? 'Finished' : 'Under Construction' }}</p>
+					</div>
+					<div>
+						<p>Client<p>
+						<p>{{ project.client }}</p>
+					</div>
+					<div>
+						<p>Location<p>
+						<p>{{ project.location }}</p>
+					</div>
+					<div>
+						<p>Team<p>
+						<p>{{ project.team }}</p>
+					</div>
+					<div>
+						<p>Collaboration<p>
+						<p>{{ project.collaboration }}</p>
+					</div>
+					<div>
+						<p>Photography<p>
+						<p>{{ project.photography }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="span2 span customSpan share">
+				<p class="strong mediumMargin">Share</p>
+				<a href="#">Twitter</a>
+				<a href="#">Facebook</a>
+			</div>
+		</div>
+		<div class="categoryContainer">
+			<div class="category largeMargin">
+				<h1 class="smallMargin">Landscape</h1>
+				<div class="span4Container spanContainer caseContainer smallMargin detailCaseContainer">
+					{% for project in projectsSimular %}	
+						{% include 'elements/case.html.twig' %}
+					{% endfor %}
+				</div>
+				<a href="{{ path('category', {'id':projectsSimular[0].category.id}) }}">See more projects in this category</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

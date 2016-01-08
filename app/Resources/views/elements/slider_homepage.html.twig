@@ -1,0 +1,31 @@
+<div class="sliderContainer">
+	<div class="popup" id="popup">
+		<img onclick="ClosePopup()" class="burgerIcon" src="{{ asset('images/burger-close.png') }}">
+		<p>Maxwan is een bureau dat zich specialiseert in ontwerpen. De integratie van stedenbouw, openbare ruimte, landschap en infrastructuur is ons doel. Maxwan streeft ernaar door intensieve samenwerking met onze opdrachtgevers, collega’s en specialisten, om onder invloed van culturele, esthetische en technische prikkels opwindende, aanlokkelijke en realiseerbare ontwerpen te maken.</p>
+	</div>
+	<div class="slider largeMargin" onmouseenter="FadeHeader()" onmouseout="ShowHeader()" onmouseover="FadeHeader()">
+		<div class="slides">
+			{% for project in projectsSlider %}
+				<div class="slide image" id="slide{{ project.id}}" style="background: url('{{ asset("images/" ~ project.slideImage) }}')">
+					<a href="{{ path('project', {'id':project.id}) }}"></a>
+				</div>
+			{% endfor %}
+		</div>
+		
+		<div class="mainContainer">
+			<div class="bullets" onmouseover="FadeHeader()" onmouseout="FadeHeader()">
+				{% for project in projectsSlider %}
+					<div onclick="Show(id)" class="bullet image" id="bullet{{ project.id}}" style="background: url('{{ asset("images/open-circle.png") }}')">
+	
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="foldNavigation" onmouseover="FadeHeader()" onmouseout="FadeHeader()">
+		<div class="mainContainer noColor">
+			<img onclick="ScrollToContent()" class="hide" id="subArrowIcon" src="{{ asset('images/arrow-down.png') }}" alt="scroll down">
+		</div>
+	</div>
+</div>

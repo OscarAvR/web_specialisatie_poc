@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/general.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/template.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/slider.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/content.css') }}" />
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body onload="InitiateSlider()">
+        <div class="page">
+			<div class="header" id="header">
+				<div class="mainContainer">
+					<div class="logo">
+						<a href="{{ path('homepage') }}">max<span id="logoColor">wan</span></a>
+					</div>
+					<div class="iconContainer">
+						<img onclick="CloseMenu()" id="burgerClose" class="burgerClose" src="{{ asset('images/burger-close.png') }}">
+						<img onclick="OpenMenu()" id="burgerIcon" class="burgerIcon" src="{{ asset('images/burger-icon.png') }}">
+						<img onclick="ScrollToContent()" class="arrowIcon hide" id="arrowIcon" src="{{ asset('images/arrow-down.png') }}" alt="scroll down">
+					</div>
+				</div>
+			</div>
+
+			{% include 'elements/menu.html.twig' %}
+			
+            {% block body %}{% endblock %}
+        
+        </div>
+        
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <script src="{{ asset('js/menu.js') }}"></script>
+        <script src="{{ asset('js/slider.js') }}"></script>
+        <script src="{{ asset('js/classie.js') }}"></script>
+        <script src="{{ asset('js/waypoints.min.js') }}"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

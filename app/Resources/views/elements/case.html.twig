@@ -1,0 +1,8 @@
+<div class="mediumMargin span4 span image case" style="background-image: url('{{ asset("images/" ~ project.thumbnail) }}')">
+	<a href="{{ path('project', {'id':project.id}) }}">
+		<div class="content">
+			<h5>{{ project.name }}</h5>
+			<h5>{{ project.quote }}</h5>
+		</div>
+	</a>
+</div>

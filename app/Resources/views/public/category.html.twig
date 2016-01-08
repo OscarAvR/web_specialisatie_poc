@@ -1,0 +1,16 @@
+{% extends 'layouts/base_public.html.twig' %}
+
+{% block body %}    
+    <div class="mainContainer headerMargin">
+		<div class="categoryContainer">
+			<div class="category">
+				<h1 class="smallMargin topTextMargin">{{ category.name }}</h1>
+				<div class="span4Container spanContainer caseContainer allCases mediumMargin">
+					{% for project in category.projects %}	
+						{% include 'elements/case.html.twig' %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

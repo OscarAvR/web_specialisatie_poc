@@ -1,0 +1,19 @@
+<div class="slider caseSlider">
+	<div class="slides">
+		{% for projectPhoto in project.projectPhotos %}
+			<div class="slide image" id="slide{{ projectPhoto.id}}" style="background: url('{{ asset("images/" ~ projectPhoto.filename) }}')">
+	
+			</div>
+		{% endfor %}
+	</div>
+	<div class="bullets caseBullets">
+		{% for projectPhoto in project.projectPhotos %}
+			<div onclick="Show(id)" class="bullet image" id="bullet{{ projectPhoto.id}}" style="background: url('{{ asset("images/open-circle.png") }}')">
+	
+			</div>
+		{% endfor %}
+	</div>
+	<div class="caseArrow">
+		<img onclick="ScrollToCaseContent()" src="{{ asset('images/arrow-down.png') }}" alt="scroll down">
+	</div>
+</div>
